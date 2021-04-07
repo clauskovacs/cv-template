@@ -1,0 +1,21 @@
+# gitignore: these files should not be added and commited to the repository!
+
+# Ignore TeX generated files which are not needed
+*.aux
+*.auxlock
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.tex.aux
+
+
+# Ignore pdfs
+#*.pdf
+
+# Ignore hidden files/directories
+.*
+!/.gitignore
