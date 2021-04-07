@@ -1,0 +1,146 @@
+\documentclass[
+	fontsize = 10.0pt,
+	a4paper,
+	parskip = half*,
+	twoside,	% do not middle align the page numbers
+]{scrartcl}
+
+\usepackage{showframe}			% show page margins
+\usepackage{xcolor}
+
+\usepackage[latin1]{inputenc}	% mutated vowels
+\usepackage{tabularx}
+% set the page margins (space left/right/top/bottom) of the page
+\usepackage	[	left	= 20mm,
+				right	= 20mm,
+				top		= 30mm,
+				bottom	= 30mm
+			]{geometry}
+
+
+% TABLES / ARRAYS
+\renewcommand{\arraystretch}{1.5}			% vertical distance between entries
+\usepackage{float}
+\usepackage{multirow}
+
+\newcommand\CVname{John Doe Cat}
+\newcommand\CVcitizenship{johndoeland}
+\newcommand\CVphonenumber{(+43) 664123456789}
+\newcommand\CVbirthdate{01/02 1900}
+\newcommand\CVmail{john@doe.com}
+\newcommand\CVaddress{john-doe street 13 (Johndoe country)}
+
+
+\begin{document}
+	\pagenumbering{arabic}
+
+	\begin{table}[H]
+		\begin{tabular}{ l l }		% table formatting
+			\multicolumn{2}{l}{{\fontsize{20pt}{17pt}\selectfont\scshape \CVname}}	\\
+			\textbf{Citizenship}				&	\CVcitizenship					\\
+			\textbf{Telephone number}			&	\CVphonenumber					\\
+			\textbf{Date of birth}				&	\CVbirthdate					\\
+			\textbf{E-mail}						&	\CVmail							\\
+			\textbf{Address}					&	\CVaddress						\\
+		\end{tabular}
+	\end{table}%
+
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape Work Experience}
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{l X}
+			\multicolumn{2}{l}{{\fontsize{14pt}{10pt}\selectfont\bfseries Cattamer}}	\\
+			\multicolumn{2}{l}{\textbf{Cat Circus Lt.} [01/02/1234 - current]}			\\
+			Location:	& aa	\\
+			Country:	& bb	\\
+			\hspace{1.5mm} & Comforting cats mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew mew\\
+		\end{tabularx}
+	\end{table}
+
+	\vspace{5mm}
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape General and Vocational Education}
+	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{l X}
+			\multicolumn{2}{l}{{\fontsize{14pt}{10pt}\selectfont\bfseries University Degree}}	\\
+			\multicolumn{2}{l}{{\fontsize{10pt}{10pt}\selectfont\bfseries Catuniversity} [01/02/1234 - 02/03/2345]}	\\
+			{\fontsize{10pt}{10pt}\selectfont\bfseries Address}: &	Catuniversity-street 1/24K Catcity	\\
+		\end{tabularx}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{l X}
+			\multicolumn{2}{l}{{\fontsize{14pt}{10pt}\selectfont\bfseries High School Diploma}}	\\
+			\multicolumn{2}{l}{{\fontsize{10pt}{10pt}\selectfont\bfseries High School for cats} [01/02/1234 - 02/03/2345]}	\\
+			{\fontsize{10pt}{10pt}\selectfont\bfseries Address}: &	Cathighschool-street 1/24K Catcity	\\
+		\end{tabularx}
+	\end{table}
+
+	\vspace{5mm}
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape Language Skills}
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
+	\begin{table}[H]
+		\begin{tabular}{ l}
+			Mother tongue(s):					\\
+			\textbf{Catspeak}					\\
+			Other languages:					\\
+			\textbf{Dogspeak} (excellent)		\\
+			\textbf{Spiderspeak} (basic)		\\
+		\end{tabular}
+	\end{table}%
+
+	\vspace{5mm}
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape Digital Skills}
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
+	\begin{table}[H]
+		\begin{tabular}{ l}
+			OfficeCat, MsDog, etc.
+		\end{tabular}
+	\end{table}%
+
+
+	\vspace{5mm}
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape Social Skills}
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
+	\begin{table}[H]
+		\begin{tabular}{ l}
+			Excellent at playing with other cats.
+		\end{tabular}
+	\end{table}%
+
+	\vspace{5mm}
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape Volunteering}
+	\vskip 1mm%
+	{\color{black!25}\hrule}
+
+	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{l X}
+			\multicolumn{2}{l}{{\fontsize{14pt}{10pt}\selectfont\bfseries Voluntary Worker at the Red Cat Cross}}	\\
+			\multicolumn{2}{l}{[Catcity, 01/02/1234 - 02/03/2345]}	\\
+			\hspace{1.5mm} & Transporting sick cats\\
+		\end{tabularx}
+	\end{table}
+
+\end{document}
