@@ -7,6 +7,7 @@
 
 \usepackage{showframe}			% show page margins
 \usepackage{xcolor}
+\usepackage{graphicx}
 
 \usepackage[latin1]{inputenc}	% mutated vowels
 \usepackage{tabularx}
@@ -30,25 +31,32 @@
 \newcommand\CVmail{john@doe.com}
 \newcommand\CVaddress{john-doe street 13 (Johndoe country)}
 
+\newcommand{\hlinewidth}{0.5mm}
+\newcommand{\hlinelength}{150mm}
+\newcommand{\hlinecolor}{black!25}
+\newcommand{\hlinevskip}{-4.0mm}
 
 \begin{document}
 	\pagenumbering{arabic}
 
+
+
+	{\fontsize{20pt}{17pt}\selectfont\scshape \CVname}
+
+	\renewcommand{\arraystretch}{1.40}
 	\begin{table}[H]
-		\begin{tabular}{ l l }		% table formatting
-			\multicolumn{2}{l}{{\fontsize{20pt}{17pt}\selectfont\scshape \CVname}}	\\
-			\textbf{Citizenship}				&	\CVcitizenship					\\
-			\textbf{Telephone number}			&	\CVphonenumber					\\
-			\textbf{Date of birth}				&	\CVbirthdate					\\
-			\textbf{E-mail}						&	\CVmail							\\
-			\textbf{Address}					&	\CVaddress						\\
+		\begin{tabular}{ p{3cm} l l }		% table formatting
+			\multirow{5}{*}{\includegraphics[height = 3.0cm]{cv_photo}}		&	\textbf{Citizenship}		&	\CVcitizenship	\\
+																			&	\textbf{Telephone number}	&	\CVphonenumber	\\
+																			&	\textbf{Date of birth}		&	\CVbirthdate	\\
+																			&	\textbf{E-mail}				&	\CVmail			\\
+																			&	\textbf{Address}			&	\CVaddress		\\
 		\end{tabular}
 	\end{table}%
 
-
 	{\fontsize{20pt}{17pt}\selectfont\scshape Work Experience}
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
 	\begin{table}[H]
@@ -65,8 +73,8 @@
 
 	{\fontsize{20pt}{17pt}\selectfont\scshape General and Vocational Education}
 	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\begin{table}[H]
 		\begin{tabularx}{\textwidth}{l X}
@@ -87,8 +95,8 @@
 	\vspace{5mm}
 
 	{\fontsize{20pt}{17pt}\selectfont\scshape Language Skills}
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
 	\begin{table}[H]
@@ -104,8 +112,8 @@
 	\vspace{5mm}
 
 	{\fontsize{20pt}{17pt}\selectfont\scshape Digital Skills}
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
 	\begin{table}[H]
@@ -118,8 +126,8 @@
 	\vspace{5mm}
 
 	{\fontsize{20pt}{17pt}\selectfont\scshape Social Skills}
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\renewcommand{\arraystretch}{1.35}			% vertical distance between entries
 	\begin{table}[H]
@@ -131,8 +139,8 @@
 	\vspace{5mm}
 
 	{\fontsize{20pt}{17pt}\selectfont\scshape Volunteering}
-	\vskip 1mm%
-	{\color{black!25}\hrule}
+	\vskip \hlinevskip%
+	\textcolor{\hlinecolor}{\rule{\hlinelength}{\hlinewidth}}
 
 	\renewcommand{\arraystretch}{1.25}			% vertical distance between entries
 	\begin{table}[H]
